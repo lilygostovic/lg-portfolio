@@ -16,43 +16,61 @@
   flex-direction: column;
   align-items: center;
   color: white;
-  background-color: lightblue;
+
+  background-image: url("./images/blurred-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .App-header {
   height: 90vh;
   align-items: left;
 
-  padding-top: 20vmin;
+  margin-top: 30vmin;
   padding-left: calc(5vmin);
   padding-right: calc(5vmin);
   
   font-size: calc(10px + 20vmin);
 }
 
+.App-subsection {
+  margin: 64px 10vw 0vw 10vw;
+}
+
 .App-subsectionHeader {
   font-size: 52px;
   font-weight: lighter;
-  padding: 64px 0vw 0vw 5vw;
 }
 
 .App-infoBlock {
-  box-shadow: 2px 2px 14px 1px rgba(255,255,255,0.25);
-  margin: 24px 5vw;
+  background-color: rgba(255,255,255,0.10);
+  box-shadow: 2px 2px 14px 1px rgba(255,255,255,0.15);
+  border-radius: 12px;
+
+  margin: 24px 0px;
   max-width: 800px;
   padding: 14px 24px;
 }
-
 .App-blockHeader {
   margin: 12px 0px;
   font-size: 32px;
   font-weight: bold;
 }
-
+.App-blockHeaderLink { /* todo:: add onHover change color */
+  color: white;
+  text-decoration: none;
+  margin: 12px 0px;
+  font-size: 32px;
+  font-weight: bold;
+}
 .App-blockSubheader {
   margin: 12px 0px;
   font-size: 20px;
   font-weight: bold;
+}
+.App-blockSkills {
+  font-style: italic;
 }
 
 .App-footer {
