@@ -2,13 +2,7 @@ import { StyledDiv } from "./StyledDiv";
 import { StyledText } from "./StyledText";
 
 export const QuickInfo = () => (
-  <StyledDiv
-    display="flex"
-    flexDirection="column"
-    top="100px"
-    position="sticky"
-    width="70%"
-  >
+  <StyledDiv display="flex" flexDirection="column" width="70%">
     <StyledText variant="title" color="white">
       Lily Gostovic
     </StyledText>

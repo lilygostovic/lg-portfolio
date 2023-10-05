@@ -21,6 +21,8 @@ function App() {
       <div
         style={{
           width: "50%",
+          position: "sticky",
+          top: "100px",
         }}
       >
         <QuickInfo />
