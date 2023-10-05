@@ -1,4 +1,3 @@
-import { StyledDiv } from "./StyledDiv";
 import { StyledText } from "./StyledText";
 
 type InformationBlockProps = {
@@ -22,13 +21,18 @@ export const InformationBlock = ({
   ...props
 }: InformationBlockProps) => {
   return (
-    <StyledDiv display="flex" mb="60px">
-      <StyledDiv>
+    <div style={{ display: "flex", marginBottom: "60px" }}>
+      <div style={{ width: "100px", paddingRight: "30px" }}>
         <StyledText variant="labelSmall">{dates}</StyledText>
-      </StyledDiv>
-      <StyledDiv width="30px" />
-      <StyledDiv width="500px" display="flex" flexDirection="column">
-        <StyledDiv display="flex" flexDirection="column" mb="20px">
+      </div>
+      <div style={{ width: "500px", display: "flex", flexDirection: "column" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginBottom: "20px",
+          }}
+        >
           <StyledText variant="paragraphSmallBold">
             {jobTitles[0]} · {company}
           </StyledText>
@@ -39,28 +43,12 @@ export const InformationBlock = ({
               <></>
             )
           )}
-        </StyledDiv>
+        </div>
         <StyledText variant="paragraphSmall">{body}</StyledText>
-        <StyledDiv mt="30px">
+        <div style={{ marginTop: "30px" }}>
           <StyledText variant="paragraphSmallItalics">{skills}</StyledText>
-        </StyledDiv>
-      </StyledDiv>
-    </StyledDiv>
-    // <StyledDiv p="12px" mb="30px" borderRadius="8px" {...props}>
-    //   <StyledText variant="header">{header}</StyledText>
-    //   {/* <p className="App-blockHeader">
-    //     <a
-    //       className="App-blockHeaderLink"
-    //       href={link}
-    //       target="_blank"
-    //       rel="noreferrer"
-    //     ></a>
-    //   </p> */}
-    //   <p className="App-blockSubheader">{subheader}</p>
-    //   {bulletpoints.map((bulletpoint) => (
-    //     <p className="App-bulletpoint">{bulletpoint}</p>
-    //   ))}
-    //   <p className="App-blockSkills">{skills}</p>
-    // </StyledDiv>
+        </div>
+      </div>
+    </div>
   );
 };
