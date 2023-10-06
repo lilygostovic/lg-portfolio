@@ -104,6 +104,20 @@ export const StyledText = styled.text<StyledTextProps>`
           line-height: 24px;
           font-weight: bold;
         `;
+      case "paragraphSmallBoldWhite":
+        return css`
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: bold;
+          color: white;
+        `;
+      case "paragraphSmallBoldGrey":
+        return css`
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: bold;
+          opacity: 0.5;
+        `;
       case "paragraphSmallItalics":
         return css`
           font-size: 16px;
@@ -114,6 +128,12 @@ export const StyledText = styled.text<StyledTextProps>`
         return css`
           font-size: 14px;
           line-height: 22px;
+        `;
+      case "paragraphTinyItalics":
+        return css`
+          font-size: 14px;
+          line-height: 22px;
+          font-style: italic;
         `;
       case "paragraphTinyBold":
         return css`
@@ -129,9 +149,21 @@ export const StyledText = styled.text<StyledTextProps>`
         `;
       case "labelTiny":
         return css`
-          font-size: 14px;
+          font-size: 12px;
           line-height: 22px;
           color: grey;
+        `;
+      case "labelTinyWhite":
+        return css`
+          font-size: 12px;
+          line-height: 22px;
+          color: lightgrey;
+        `;
+      case "labelTinyHighlight":
+        return css`
+          font-size: 12px;
+          line-height: 22px;
+          color: #ffe553;
         `;
       case "labelSuperTiny":
         return css`

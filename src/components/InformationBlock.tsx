@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { StyledText } from "./StyledText";
 
 type InformationBlockProps = {
@@ -7,7 +9,8 @@ type InformationBlockProps = {
   location: string;
   link: string;
   body: string;
-  skills: string;
+  skills: Array<string>;
+  last?: boolean;
 };
 
 export const InformationBlock = ({
@@ -18,37 +21,97 @@ export const InformationBlock = ({
   link,
   body,
   skills,
+  last = false,
   ...props
 }: InformationBlockProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const formattedDates = dates.toUpperCase();
+
   return (
-    <div style={{ display: "flex", marginBottom: "60px" }}>
-      <div style={{ width: "100px", paddingRight: "30px" }}>
-        <StyledText variant="labelSmall">{dates}</StyledText>
+    <a
+      href={link}
+      rel="noreferrer"
+      target="_blank"
+      style={{ textDecoration: "none" }}
+    >
+      <div
+        style={{
+          display: "flex",
+          padding: "20px",
+          marginBottom: last ? "20px" : "60px",
+          borderRadius: "8px",
+
+          backgroundColor: isHovered ? "#8f8f8f16" : "transparent",
+          transition: "background-color 0.2s",
+
+          color: "white",
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div style={{ width: "160px", paddingRight: "30px" }}>
+          <StyledText variant="labelTiny">{formattedDates}</StyledText>
+        </div>
+        <div
+          style={{ width: "500px", display: "flex", flexDirection: "column" }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginBottom: "10px",
+            }}
+          >
+            <div
+              style={{
+                color: isHovered ? "#ffe553" : "white",
+                transition: "color 0.2s",
+              }}
+            >
+              <StyledText variant="paragraphSmallBold">
+                {jobTitles[0]} · {company}
+              </StyledText>
+            </div>
+            {jobTitles.map((jobTitle) =>
+              jobTitle !== jobTitles[0] ? (
+                <StyledText variant="paragraphSmallBoldGrey">
+                  {jobTitle}
+                </StyledText>
+              ) : (
+                <></>
+              )
+            )}
+          </div>
+          <div style={{ color: "lightgrey" }}>
+            <StyledText variant="paragraphTiny">{body}</StyledText>
+            <Skills skills={skills} />
+          </div>
+        </div>
       </div>
-      <div style={{ width: "500px", display: "flex", flexDirection: "column" }}>
+    </a>
+  );
+};
+
+type SkillsProps = {
+  skills: Array<string>;
+};
+
+const Skills = ({ skills }: SkillsProps) => {
+  return (
+    <div style={{ display: "flex", flexWrap: "wrap", marginTop: "10px" }}>
+      {skills.map((skill) => (
         <div
           style={{
-            display: "flex",
-            flexDirection: "column",
-            marginBottom: "20px",
+            backgroundColor: "#544e2d50",
+            padding: "0px 10px 0px 10px",
+            margin: "4px",
+            borderRadius: "16px",
           }}
         >
-          <StyledText variant="paragraphSmallBold">
-            {jobTitles[0]} · {company}
-          </StyledText>
-          {jobTitles.map((jobTitle) =>
-            jobTitle !== jobTitles[0] ? (
-              <StyledText variant="paragraphSmallBold">{jobTitle}</StyledText>
-            ) : (
-              <></>
-            )
-          )}
+          <StyledText variant="labelTinyHighlight">{skill}</StyledText>
         </div>
-        <StyledText variant="paragraphSmall">{body}</StyledText>
-        <div style={{ marginTop: "30px" }}>
-          <StyledText variant="paragraphSmallItalics">{skills}</StyledText>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

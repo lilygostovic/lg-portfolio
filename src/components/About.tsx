@@ -1,7 +1,7 @@
 import { StyledText } from "./StyledText";
 
 export const About = () => (
-  <div>
+  <div style={{ color: "lightgrey" }}>
     <StyledText variant="paragraphMedium">Hi! I'm Lily</StyledText>
     <StyledText variant="paragraphSmall">
       , a fourth year CS and Linguistics student with expertise in web and app
@@ -14,7 +14,7 @@ export const About = () => (
       APIs to automate my daily life. Check out my recent project{" "}
     </StyledText>
     {/* TODO:: add link to zacks picks repo */}
-    <StyledText variant="paragraphSmallBold">Zacks Picks</StyledText>
+    <StyledText variant="paragraphSmallBoldWhite">Zacks Picks</StyledText>
     <StyledText variant="paragraphSmall"> to see how I've done so.</StyledText>
     <div style={{ marginBottom: "20px" }} />
     <StyledText variant="paragraphSmall">
