@@ -1,3 +1,4 @@
+import resume from "../documents/resume.pdf";
 import { useState } from "react";
 
 import {
@@ -9,8 +10,6 @@ import {
   SectionBottomLink,
   StyledDiv,
 } from "../components";
-
-// import { resume } from "../documents";
 
 export const HomePage = () => {
   const [currentDiv, setCurrentDiv] = useState<
@@ -61,7 +60,7 @@ export const HomePage = () => {
         <About />
 
         <Experience />
-        <SectionBottomLink title="View Full CV" link="" />
+        <SectionBottomLink title="View Full CV" link={resume} />
 
         <Projects />
         <SectionBottomLink
