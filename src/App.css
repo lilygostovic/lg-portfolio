@@ -57,7 +57,7 @@
   font-size: 32px;
   font-weight: bold;
 }
-.App-blockHeaderLink { /* todo:: add onHover change color */
+.App-blockHeaderLink {
   color: white;
   text-decoration: none;
   margin: 12px 0px;

@@ -13,7 +13,6 @@ export const About = () => (
       Recently, I've been interested in exploring different ways I can utilize
       APIs to automate my daily life. Check out my recent project{" "}
     </StyledText>
-    {/* TODO:: add link to zacks picks repo */}
     <a
       href="https://github.com/lilygostovic/zacks-picks"
       rel="noreferrer"
