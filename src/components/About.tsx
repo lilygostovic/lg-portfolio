@@ -14,7 +14,14 @@ export const About = () => (
       APIs to automate my daily life. Check out my recent project{" "}
     </StyledText>
     {/* TODO:: add link to zacks picks repo */}
-    <StyledText variant="paragraphSmallBoldWhite">Zacks Picks</StyledText>
+    <a
+      href="https://github.com/lilygostovic/zacks-picks"
+      rel="noreferrer"
+      target="_blank"
+      style={{ textDecoration: "none" }}
+    >
+      <StyledText variant="paragraphSmallBoldWhite">Zacks Picks</StyledText>
+    </a>
     <StyledText variant="paragraphSmall"> to see how I've done so.</StyledText>
     <div style={{ margin: "20px 0px" }} />
     <StyledText variant="paragraphSmall">
