@@ -1,7 +1,7 @@
 import { InformationBlock } from "./InformationBlock";
 
 export const Experience = () => (
-  <div>
+  <div id="experience">
     <InformationBlock
       dates="May 2022 - Jan 2023"
       jobTitles={["SWE Working Student", "SWE Summer Intern"]}

@@ -1,9 +1,10 @@
-export { StyledText } from "./StyledText";
-export { StyledDiv } from "./StyledDiv";
+export { StyledText } from "./common/StyledText";
+export { StyledDiv } from "./common/StyledDiv";
 
 export { About } from "./About";
 export { Experience } from "./Experience";
 export { Footer } from "./Footer";
-export { InformationBlock } from "./InformationBlock";
+export { InformationBlock } from "./Experience/InformationBlock";
+export { Projects } from "./Projects";
 export { QuickInfo } from "./QuickInfo";
-export { ResumeLink } from "./ResumeLink";
+export { SectionBottomLink } from "./SectionBottomLink";

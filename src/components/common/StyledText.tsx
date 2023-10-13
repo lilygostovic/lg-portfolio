@@ -68,7 +68,7 @@ export const StyledText = styled.text<StyledTextProps>`
         return css`
           font-size: 18px;
           line-height: 32px;
-          color: lightgrey;
+          color: darkgrey;
         `;
       case "headerBig":
         return css`
@@ -153,11 +153,25 @@ export const StyledText = styled.text<StyledTextProps>`
           line-height: 22px;
           color: grey;
         `;
-      case "labelTinyWhite":
+      case "labelTinyBold":
+        return css`
+          font-size: 12px;
+          line-height: 22px;
+          color: grey;
+          font-weight: bold;
+        `;
+      case "labelTinyBoldWhite":
         return css`
           font-size: 12px;
           line-height: 22px;
           color: lightgrey;
+          font-weight: bold;
+        `;
+      case "labelTinyLightGrey":
+        return css`
+          font-size: 12px;
+          line-height: 22px;
+          color: darkgrey;
         `;
       case "labelTinyHighlight":
         return css`
