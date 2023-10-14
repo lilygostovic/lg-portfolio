@@ -1,5 +1,4 @@
-import resume from "../documents/resume.pdf";
-import { useState } from "react";
+import { useState } from 'react';
 
 import {
   About,
@@ -8,10 +7,18 @@ import {
   Projects,
   QuickInfo,
   SectionBottomLink,
+  Socials,
   StyledDiv,
-} from "../components";
+} from '../components';
+import resume from '../documents/resume.pdf';
 
 export const HomePage = () => {
+  const [isSmallWindow, setIsSmallWindow] = useState(window.innerWidth < 900);
+  const checkIsSmallWindow = () => {
+    setIsSmallWindow(window.innerWidth < 900);
+  };
+  window.onresize = checkIsSmallWindow;
+
   const [currentDiv, setCurrentDiv] = useState<
     "about" | "experience" | "projects"
   >("about");
@@ -46,17 +53,31 @@ export const HomePage = () => {
 
   return (
     <StyledDiv
-      px="170px"
+      px={isSmallWindow ? "80px" : "170px"}
       color="lightgrey"
       bg="#0c1525"
       display="flex"
-      flexDirection="row"
+      flexDirection={isSmallWindow ? "column" : "row"}
       alignItems="flex-start"
     >
-      <StyledDiv width="50%" position="sticky" top="100px">
-        <QuickInfo currentDiv={currentDiv} />
+      <StyledDiv
+        width={isSmallWindow ? "100%" : "50%"}
+        position={isSmallWindow ? "static" : "sticky"}
+        top="100px"
+        mt="100px"
+      >
+        <StyledDiv
+          height={isSmallWindow ? "55vh" : "75vh"}
+          display="flex"
+          flexDirection="column"
+          justifyContent="space-between"
+          width={isSmallWindow ? "100%" : "70%"}
+        >
+          <QuickInfo currentDiv={currentDiv} />
+          <Socials />
+        </StyledDiv>
       </StyledDiv>
-      <div style={{ width: "50%" }}>
+      <div style={{ width: isSmallWindow ? "100%" : "50%" }}>
         <About />
 
         <Experience />
