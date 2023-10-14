@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 import {
   About,
@@ -9,12 +9,14 @@ import {
   SectionBottomLink,
   Socials,
   StyledDiv,
-} from '../components';
-import resume from '../documents/resume.pdf';
+} from "../components";
+import resume from "../documents/resume.pdf";
 
 export const HomePage = () => {
+  const [isTinyWindow, setIsTinyWindow] = useState(window.innerWidth < 900);
   const [isSmallWindow, setIsSmallWindow] = useState(window.innerWidth < 900);
   const checkIsSmallWindow = () => {
+    setIsTinyWindow(window.innerWidth < 400);
     setIsSmallWindow(window.innerWidth < 900);
   };
   window.onresize = checkIsSmallWindow;
@@ -53,7 +55,7 @@ export const HomePage = () => {
 
   return (
     <StyledDiv
-      px={isSmallWindow ? "80px" : "170px"}
+      px={isSmallWindow ? (isTinyWindow ? "20px" : "80px") : "170px"}
       color="lightgrey"
       bg="#0c1525"
       display="flex"
@@ -74,12 +76,14 @@ export const HomePage = () => {
           width={isSmallWindow ? "100%" : "70%"}
         >
           <QuickInfo currentDiv={currentDiv} />
-          {isSmallWindow && <div
-            style={{
-              height: "50px",
-              width: "300px",
-            }}
-          />}
+          {isSmallWindow && (
+            <div
+              style={{
+                height: "50px",
+                width: "300px",
+              }}
+            />
+          )}
           <Socials />
         </StyledDiv>
       </StyledDiv>
