@@ -67,13 +67,19 @@ export const HomePage = () => {
         mt="100px"
       >
         <StyledDiv
-          height={isSmallWindow ? "55vh" : "75vh"}
+          height={isSmallWindow ? "" : "75vh"}
           display="flex"
           flexDirection="column"
           justifyContent="space-between"
           width={isSmallWindow ? "100%" : "70%"}
         >
           <QuickInfo currentDiv={currentDiv} />
+          {isSmallWindow && <div
+            style={{
+              height: "50px",
+              width: "300px",
+            }}
+          />}
           <Socials />
         </StyledDiv>
       </StyledDiv>
