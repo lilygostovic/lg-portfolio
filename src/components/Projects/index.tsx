@@ -3,6 +3,12 @@ import { ProjectBlock } from "./ProjectBlock";
 export const Projects = () => (
   <div id="projects">
     <ProjectBlock
+      title="Photography Portfolio Website"
+      link="https://photography.lilygostovic.com"
+      body="Website which showcases my photography work. Divided into different journals, you can check out all the different places I've travelled through the lens of my various cameras."
+      skills={["TypeScript", "React", "HTML", "CSS"]}
+    />
+    <ProjectBlock
       title="Apple Music to Spotify"
       link="https://github.com/lilygostovic/zacks-picks"
       body="Python scripts to scrape data from a friends Apple Music playlist and transfer to a Spotify playlist weekly."
