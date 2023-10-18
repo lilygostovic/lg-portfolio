@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 import {
   About,
@@ -9,8 +9,8 @@ import {
   SectionBottomLink,
   Socials,
   StyledDiv,
-} from "../components";
-import resume from "../documents/resume.pdf";
+} from '../components';
+import cv from '../documents/lg-cv.pdf';
 
 export const HomePage = () => {
   const [isTinyWindow, setIsTinyWindow] = useState(window.innerWidth < 900);
@@ -91,7 +91,7 @@ export const HomePage = () => {
         <About />
 
         <Experience />
-        <SectionBottomLink title="View Full CV" link={resume} />
+        <SectionBottomLink title="View Full CV" link={cv} />
 
         <Projects />
         <SectionBottomLink
