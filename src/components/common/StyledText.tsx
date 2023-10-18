@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 /* eslint-disable @typescript-eslint/indent */
 import {
   color,
@@ -11,7 +11,7 @@ import {
   type SpaceProps,
   typography,
   type TypographyProps,
-} from "styled-system";
+} from 'styled-system';
 
 export type TextVariant =
   | "title"
@@ -27,6 +27,7 @@ export type TextVariant =
   | "paragraphTinyBold"
   | "labelSmall"
   | "labelTiny"
+  | "labelTinyRed"
   | "labelSuperTiny"
   | "labelSuperTinyBold"
   | "numberBig"
@@ -152,6 +153,13 @@ export const StyledText = styled.text<StyledTextProps>`
           font-size: 12px;
           line-height: 22px;
           color: grey;
+        `;
+      case "labelTinyRed":
+        return css`
+          font-size: 10px;
+          line-height: 17px;
+          font-weight: bold;
+          color: #bf0000;
         `;
       case "labelTinyBold":
         return css`

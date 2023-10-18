@@ -11,8 +11,19 @@ export const About = () => (
     <div style={{ margin: "20px 0px" }} />
     <StyledText variant="paragraphSmall">
       Recently, I've been interested in exploring different ways I can utilize
-      APIs to automate my daily life. Check out my recent project{" "}
+      APIs to automate my daily life. Check out my current projects{" "}
     </StyledText>
+    <a
+      href="https://github.com/lilygostovic/music-sport-performance"
+      rel="noreferrer"
+      target="_blank"
+      style={{ textDecoration: "none" }}
+    >
+      <StyledText variant="paragraphSmallBoldWhite">
+        Music Sport Performance
+      </StyledText>
+    </a>
+    <StyledText variant="paragraphSmall"> and </StyledText>
     <a
       href="https://github.com/lilygostovic/zacks-picks"
       rel="noreferrer"
@@ -21,7 +32,7 @@ export const About = () => (
     >
       <StyledText variant="paragraphSmallBoldWhite">Zacks Picks</StyledText>
     </a>
-    <StyledText variant="paragraphSmall"> to see how I've done so.</StyledText>
+    <StyledText variant="paragraphSmall"> to see how I'm doing so.</StyledText>
     <div style={{ margin: "20px 0px" }} />
     <StyledText variant="paragraphSmall">
       I love running, hiking, alpine and nordic skiing. Really anything that
