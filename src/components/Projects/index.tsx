@@ -1,4 +1,4 @@
-import { ProjectBlock } from "./ProjectBlock";
+import { ProjectBlock } from './ProjectBlock';
 
 export const Projects = () => (
   <div id="projects">
@@ -6,7 +6,7 @@ export const Projects = () => (
       title="Zacks Picks: From Apple Music to Spotify"
       link="https://github.com/lilygostovic/zacks-picks"
       body="Python scripts to scrape data from a friends Apple Music playlist and transfer to a Spotify playlist weekly."
-      skills={["Python", "Beautiful Soup 4, Spotify API"]}
+      skills={["Python", "Beautiful Soup 4", "Spotify API"]}
       inProgress={true}
     />
     <ProjectBlock
