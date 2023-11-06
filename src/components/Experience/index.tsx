@@ -1,10 +1,10 @@
-import { InformationBlock } from "./InformationBlock";
+import { InformationBlock } from './InformationBlock';
 
 export const Experience = () => (
   <div id="experience">
     <InformationBlock
       dates="May 2022 - Jan 2023"
-      jobTitles={["SWE Working Student", "SWE Summer Intern"]}
+      jobTitles={["Software Engineer", "Software Engineer Intern"]}
       company="Forget Finance"
       location="Berlin, Germany"
       link="https://www.forget.finance/en"
