@@ -3,6 +3,15 @@ import { InformationBlock } from './InformationBlock';
 export const Experience = () => (
   <div id="experience">
     <InformationBlock
+      dates="Oct 2023 - Present"
+      jobTitles={["Frontend Developer"]}
+      company="Per/severe"
+      location="Montreal, Canada"
+      link="https://www.perseveremtl.com"
+      body="Developed a static website for Montreal Multimedia Philanthropic Art Exhibit Per/severe. Created project from scratch using Create React App, and iteratively added new features. Handled domain purchase using GoDaddy and deployment using Render. Created 'Shownotes' page for Per/severe 2023 that guests could view by scanning QR codes at the event to read about the art and artists."
+      skills={["TypeScript", "React", "Git", "Deployment"]}
+    />
+    <InformationBlock
       dates="May 2022 - Jan 2023"
       jobTitles={["Software Engineer", "Software Engineer Intern"]}
       company="Forget Finance"

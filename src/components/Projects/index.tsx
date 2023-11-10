@@ -1,4 +1,4 @@
-import { ProjectBlock } from './ProjectBlock';
+import { ProjectBlock } from "./ProjectBlock";
 
 export const Projects = () => (
   <div id="projects">
@@ -20,13 +20,13 @@ export const Projects = () => (
       title="Photography Portfolio Website"
       link="https://photography.lilygostovic.com"
       body="Website which showcases my photography work. Divided into different journals, you can check out all the different places I've travelled through the lens of my various cameras."
-      skills={["TypeScript", "React", "HTML", "CSS"]}
+      skills={["TypeScript", "React", "Deployment"]}
     />
     <ProjectBlock
       title="Personal Website"
       link="https://github.com/lilygostovic/lg-portfolio"
       body="A publicly available website that showcases who I am as a dev, and beyond. Used React and TypeScript to create a web app displaying information about myself and pointing the user to places they can learn more about my work and myself. Deployed using render.com."
-      skills={["TypeScript", "React", "HTML", "CSS"]}
+      skills={["TypeScript", "React", "Deployment"]}
     />
     <ProjectBlock
       title="Class Enrollment Utility"
