@@ -1,14 +1,8 @@
-import {
-  cameraIcon,
-  githubIcon,
-  linkedinIcon,
-  spotifyIcon,
-  stravaIcon,
-} from '../images';
-import { StyledDiv } from './common';
+import { githubIcon, linkedinIcon, spotifyIcon, stravaIcon } from "../images";
+import { StyledDiv } from "./common";
 
 export const Socials = () => (
-  <StyledDiv width="225px" display="flex" justifyContent="space-between">
+  <StyledDiv width="180px" display="flex" justifyContent="space-between">
     <a href="https://github.com/lilygostovic" rel="noreferrer" target="_blank">
       <img
         src={githubIcon}
@@ -49,18 +43,6 @@ export const Socials = () => (
       <img
         src={spotifyIcon}
         alt="link to spotify profile"
-        height="25px"
-        style={{ filter: "invert(100%) opacity(60%)" }}
-      />
-    </a>
-    <a
-      href="https://photography.lilygostovic.com"
-      rel="noreferrer"
-      target="_blank"
-    >
-      <img
-        src={cameraIcon}
-        alt="link to photography website"
         height="25px"
         style={{ filter: "invert(100%) opacity(60%)" }}
       />
