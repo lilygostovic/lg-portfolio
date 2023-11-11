@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { HoverableDiv, SkillsList } from "../common";
-import { StyledDiv } from "../common/StyledDiv";
-import { StyledText } from "../common/StyledText";
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import {
+  HoverableDiv,
+  SkillsList,
+} from '../common';
+import { StyledDiv } from '../common/StyledDiv';
+import { StyledText } from '../common/StyledText';
 
 type InformationBlockProps = {
   dates: string;
@@ -12,6 +18,7 @@ type InformationBlockProps = {
   link: string;
   body: string;
   skills: Array<string>;
+  referenceLetter?: string;
   last?: boolean;
 };
 
@@ -23,6 +30,7 @@ export const InformationBlock = ({
   link,
   body,
   skills,
+  referenceLetter = undefined,
   last = false,
   ...props
 }: InformationBlockProps) => {
@@ -63,7 +71,45 @@ export const InformationBlock = ({
           <StyledText variant="paragraphTiny">{body}</StyledText>
           <SkillsList skills={skills} />
         </StyledDiv>
+        {referenceLetter && (
+          <ReferenceLetter title="Reference letter" link={referenceLetter} />
+        )}
       </StyledDiv>
     </HoverableDiv>
+  );
+};
+
+type SectionBottomLinkProps = {
+  title: string;
+  link: string;
+};
+
+export const ReferenceLetter = ({ title, link }: SectionBottomLinkProps) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <a
+      href={link}
+      rel="noreferrer"
+      target="_blank"
+      style={{ textDecoration: "none", marginTop: "10px" }}
+    >
+      <StyledDiv
+        color="white"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <StyledText
+          variant="paragraphTinyBold"
+          style={{
+            marginRight: isHovered ? "17px" : "10px",
+            transition: "margin-right 0.2s",
+          }}
+        >
+          {title}
+        </StyledText>
+        <FontAwesomeIcon icon={faArrowRight} size="xs" />
+      </StyledDiv>
+    </a>
   );
 };

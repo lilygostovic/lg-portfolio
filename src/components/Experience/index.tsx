@@ -1,4 +1,5 @@
-import { InformationBlock } from './InformationBlock';
+import NordASILReferenceLetter from "../../documents/nordasil-reference-letter.pdf";
+import { InformationBlock } from "./InformationBlock";
 
 export const Experience = () => (
   <div id="experience">
@@ -60,6 +61,7 @@ export const Experience = () => (
         "Led a front-end team in developing a dashboard which visualizes data scraped from the Danish Asylum Seeker online records. Chose the front-end tech stack, set up the project, implemented good coding practices such as code review and code formatting."
       }
       skills={["TypeScript", "React", "GitHub", "Python", "Django"]}
+      referenceLetter={NordASILReferenceLetter}
     />
     <InformationBlock
       jobTitles={["Research Assistant"]}
