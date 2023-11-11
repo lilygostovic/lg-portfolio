@@ -1,5 +1,10 @@
-import { githubIcon, linkedinIcon, spotifyIcon, stravaIcon } from "../images";
-import { StyledDiv } from "./common";
+import {
+  githubIcon,
+  linkedinIcon,
+  spotifyIcon,
+  stravaIcon,
+} from '../images';
+import { StyledDiv } from './common';
 
 export const Socials = () => (
   <StyledDiv width="180px" display="flex" justifyContent="space-between">
@@ -24,7 +29,7 @@ export const Socials = () => (
       />
     </a>
     <a
-      href="https://www.strava.com/athletes/24607964"
+      href="https://www.strava.com/athletes/24507964"
       rel="noreferrer"
       target="_blank"
     >
