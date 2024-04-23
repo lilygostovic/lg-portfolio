@@ -1,14 +1,11 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-  HoverableDiv,
-  SkillsList,
-} from '../common';
-import { StyledDiv } from '../common/StyledDiv';
-import { StyledText } from '../common/StyledText';
+import { HoverableDiv, SkillsList } from "../common";
+import { StyledDiv } from "../common/StyledDiv";
+import { StyledText } from "../common/StyledText";
 
 type InformationBlockProps = {
   dates: string;

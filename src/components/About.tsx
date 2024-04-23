@@ -4,9 +4,10 @@ export const About = () => (
   <div id="about" style={{ color: "lightgrey", paddingTop: "100px" }}>
     <StyledText variant="paragraphMedium">Hi! I'm Lily</StyledText>
     <StyledText variant="paragraphSmall">
-      , a fourth year CS and Linguistics student with expertise in web and app
-      dev and growing experience in machine learning. I love learning and
-      solving puzzles and am always looking for a challenge.
+      , a recent graduate of Computer Science from McGill University with
+      expertise in web and app development and growing experience in machine
+      learning. I love learning and solving puzzles and am always looking for a
+      challenge.
     </StyledText>
     <div style={{ margin: "20px 0px" }} />
     <StyledText variant="paragraphSmall">
